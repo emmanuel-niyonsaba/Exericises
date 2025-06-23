@@ -1,0 +1,16 @@
+
+
+// this is for cratind the function to calculate the discount by using the bind method
+
+
+const products={
+    name: "cassava",
+    price: 400,
+    findDiscount : function(){
+        const price = this.price
+        const discount = (price*10)/100;
+        return discount;
+    }
+}
+const a = products.findDiscount()
+console.log(a);
