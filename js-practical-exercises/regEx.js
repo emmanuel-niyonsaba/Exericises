@@ -79,6 +79,8 @@ const simpleCoatResult = simpleCoat.match(alphebeticRegEx).length;
 console.log(simpleCoatResult)
 
 // match for all numbers  we use \d
+// \s is used to find all spaces in the string
+
 
 
 
@@ -91,3 +93,12 @@ const usename= "emmanuelNiyonsaba"
 const checkUserNameRegEx = /^[A-Za-z]{2,}\d*$/
 const checkUserNameResult = checkUserNameRegEx.test(usename)
 console.log(checkUserNameResult);
+
+// this is for how to replace the set of character is string with another one
+
+const hugText = "Hello , My name is Ndihokubwayo"
+const fixRegEx= /Ndihokubwayo/
+const replaceText ="Emmanuel"
+const replaceTextResult= hugText.replace(fixRegEx,replaceText)
+console.log(replaceTextResult);
+
