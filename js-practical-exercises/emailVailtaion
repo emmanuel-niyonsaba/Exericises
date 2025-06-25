@@ -1,0 +1,8 @@
+
+
+const emailValidation =(email)=>{
+    const regEx =/^[a-zA-Z0-9]*@gmail.com$/
+const emaiCheck = regEx.test(email)
+return emaiCheck === true ? "email saved" : "sorry your email don't meet standards"
+}
+console.log(emailValidation("iryeiryur@gmail.com"));
