@@ -97,7 +97,7 @@ console.log(checkUserNameResult);
 // this is for how to replace the set of character is string with another one
 
 const hugText = "Hello , My name is Ndihokubwayo"
-const fixRegEx= /Ndihokubwayo/
+const fixRegEx= /Ndihokubwayo/g
 const replaceText ="Emmanuel"
 const replaceTextResult= hugText.replace(fixRegEx,replaceText)
 console.log(replaceTextResult);
