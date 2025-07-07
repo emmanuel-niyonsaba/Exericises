@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input {
+            margin: 5px;
+            padding: 8px;
+        }
+        button {
+            padding: 8px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to EdenReserve</h1> 
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Rows will be added here -->
+        </tbody>
+    </table>
+    
+    <form>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="number" id="age" placeholder="Age" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <button type="button" onclick="addRow()">Add Row</button>
+    </form>
+
+    <script>
+        function addRow() {
+            // Get current input values
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const email = document.getElementById("email").value;
+            
+            // Validate inputs
+            if (!name || !age || !email) {
+                alert("Please fill all fields");
+                return;
+            }
+            
+            // Create new row
+            const tableBody = document.getElementById("tableBody");
+            const newRow = document.createElement("tr");
+            newRow.innerHTML = `
+                <td>${name}</td>
+                <td>${age}</td>
+                <td>${email}</td>
+                
+            `;
+           const deleteButton= document.createElement("button")
+           deleteButton.textContent ="X"
+           newRow.appendChild(deleteButton)
+           
+           
+           // Add row to table
+           tableBody.appendChild(newRow);
+           
+                      deleteButton.addEventListener("click",()=>{
+                       deleteButton.remove()
+                       newRow.remove()
+                      })
+            
+            // Clear form
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("email").value = "";
+        }
+    </script>
+</body>
+</html>
