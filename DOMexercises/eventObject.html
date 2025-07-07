@@ -1,0 +1,24 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>DOM Event object</h2>
+    <P id="pragraph1">I am now <span>Learnig</span> DOM</P>
+    <script>
+
+        function myFunction(event){
+            console.log(event)
+            alert("You have now cliked to the page!!")
+        }
+
+        document.addEventListener('click',myFunction)
+      
+    </script>
+</body>
+</html>

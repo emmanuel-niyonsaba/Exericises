@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+      #shape{
+         background-color: blue;
+         width: 3rem;
+         height: 2rem;
+         position: relative;
+
+      }
+    </style>
+</head>
+<div id="shape"></div>
+<br>
+<button onclick="AnimationFun()">Animate now</button>
+<script>
+   function AnimationFun(){
+      let element = document.getElementById("shape");
+      
+      let position = 0
+      let id = setInterval(intervallFun,100)
+      function intervallFun(){
+         position ++;
+         if(position == 1000){
+            clearInterval(id)
+         }
+         else{
+            element.style.left = position + "px"
+         }
+      }
+   }
+</script>
+</body>
+</html>
