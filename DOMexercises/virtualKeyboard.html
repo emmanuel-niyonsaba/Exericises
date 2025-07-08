@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>virtual keyboard</h1>
+    <textarea name="" id="input" rows="4"></textarea>
+    <h3 id="virtualchar"></h3>
+    <script>
+        // DOM Element
+        const input = document.getElementById("input")
+        const virtualchar = document.getElementById("virtualchar")
+input.addEventListener("input",()=>{
+    const chars = input.value.split("")
+    chars.forEach((char,index)=>{
+
+        setTimeout(()=>{
+            virtualchar.textContent +=char
+        },20*index)
+    })
+    
+    
+})
+
+    </script>
+
+</body>
+</html>

@@ -22,7 +22,7 @@
       let element = document.getElementById("shape");
       
       let position = 0
-      let id = setInterval(intervallFun,100)
+      let id = setInterval(intervallFun,10)
       function intervallFun(){
          position ++;
          if(position == 1000){
@@ -30,6 +30,7 @@
          }
          else{
             element.style.left = position + "px"
+            element.style.d = position + "px"
          }
       }
    }
