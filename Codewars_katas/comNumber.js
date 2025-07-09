@@ -17,4 +17,4 @@ function numCombo(arr, num) {
   return count;
 }
 
-console.log(numCombo([1,0,0,0,0],0))
+console.log(numCombo([1,7,4,5,0],8))
