@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background-color:rgb(196, 203, 242);
+            align-items: center;
+            width: 30rem;
+            margin-left: 8rem;
+            padding: 3rem;
+        }
+        .questions{
+            width: 100%;
+        }
+        input{
+            align-items: center;
+            width: 50%;
+            height: 2rem;
+            text-align: left;
+            border-radius: 7px;
+            border: none;
+            
+        }
+        .submit-btn{
+            color:greenyellow;
+            background-color:blueviolet;
+            margin-left: 70%;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Quiz to know me!!</h1>
+    <h2>Answer the question and clik sumbit</h2>
+    <form action="">
+        <div class="questions">
+
+            <h2>What's my name</h2>
+            <input type="text" placeholder="name" class="name"> 
+            <h2>How old are me!!</h2>
+            <input type="number" placeholder="Age" class="age">
+            <h2>What is my home district</h2>
+            <input type="text" placeholder="district" class="district">
+            <h2>Which color do I like</h2>
+            <input type="text" placeholder="color" class="color">
+            <h2>Wht's do for enjoy</h2>
+            <input type="text" placeholder="I injoy" class="enjoy">
+        </div>
+        <button class="submit-btn">sumbit</button>
+        
+    </form>
+    <script>
+        const button = document.querySelector(".submit-btn");
+button.addEventListener("click", (e) => {
+    e.preventDefault();
+    let marks = 0;
+    
+    // Dom elements
+    const name = document.querySelector(".name");
+    const age = document.querySelector(".age");
+    const district = document.querySelector(".district");
+    const color = document.querySelector(".color");
+    const enjoy = document.querySelector(".enjoy");
+    
+    if(name.value == "Emmanuel Niyonsaba"){
+        name.style.backgroundColor = "green";
+        marks += 1;
+    } else {
+        name.style.backgroundColor = "red";
+    }
+    
+    if(parseInt(age.value) === 30){
+        age.style.backgroundColor = "green";
+        marks += 1;
+    } else {
+        age.style.backgroundColor = "red";
+    }
+    
+    if(district.value == "Ngororero"){
+        district.style.backgroundColor = "green";
+        marks += 1;
+    } else {
+        district.style.backgroundColor = "red";
+    }
+    
+    if(color.value == "Black"){
+        color.style.backgroundColor = "green";
+        marks += 1;
+    } else {
+        color.style.backgroundColor = "red";
+    }
+    
+    if(enjoy.value == "Football"){
+        enjoy.style.backgroundColor = "green";
+        marks += 1;
+    } else {
+        enjoy.style.backgroundColor = "red";
+    }
+    
+    const marksView = document.createElement("h1");
+    marksView.textContent = `Congratulations for your submission: You got ${marks * 20}%`;
+    document.body.appendChild(marksView);
+});
+    </script>
+</body>
+</html>
+
+

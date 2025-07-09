@@ -52,6 +52,9 @@
             background-color: #ff4444;
             color: white;
         }
+        .changeColor{
+            background-color: red;
+        }
     </style>
 </head>
 <body>
@@ -134,7 +137,19 @@
             `;
             
             document.getElementById("tablebody").appendChild(newRow);
+            
         }
+        const devs = document.querySelectorAll(".product")
+          for( let i of devs){
+
+            i.addEventListener("mouseover",()=>{
+                i.classList.add("changeColor")
+            })
+            i.addEventListener("mouseout",()=>{
+                i.classList.remove("changeColor")
+            })
+          }
+        
         
         function deleteRow(button) {
                 
@@ -142,6 +157,7 @@
           row.remove()
           
         }
+        
     </script>
 </body>
 </html>
