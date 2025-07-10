@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideShow</title>
+    <style>
+        .photos {
+            display: flex;
+            background-color: blueviolet;
+            gap: 3rem;
+            height: 30rem;
+           
+
+        }
+
+        .photo {
+            height: 100%;
+          
+            
+        }
+        
+        .photo img {
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+         
+        }
+       .display{
+        background-color: red;
+       }
+    </style>
+</head>
+
+<body>
+    <h1>Slide Show</h1>
+
+    <h1>Products</h1>
+    <div class="photos">
+        <button class="rightButton"><</button>
+                <div class="photo">
+                    <h2>Football</h2>
+                    <img src="/ball.jpg" alt="">
+                </div>
+                <div class="photo">
+                    <h2>Laptop</h2>
+                    <img src="/laptop.jpg" alt="">
+                </div>
+
+                <div class="photo">
+                    <h2>Shoes</h2>
+                    <img src="/shoes.jpg" alt="">
+                </div>
+                <div class="photo">
+                    <h2>Speaker</h2>
+                    <img src="/speaker.jpg" alt="">
+                </div>
+                <button class="leftButton">></button>
+
+    </div>
+    <script>
+        let count =0
+     const photo = document.querySelectorAll(".photo")
+     const rightButton = document.querySelector(".rightButton")
+     const leftButton = document.querySelector(".leftButton")
+     rightButton.addEventListener("click",()=>{
+        if(count === 4)return
+        count +=1
+        for(let i of photo){
+            i.classList.remove("display")
+        }
+        photo[count -1].classList.toggle("display")
+
+
+
+    })
+     leftButton.addEventListener("click",()=>{
+        for(let i of photo){
+            i.classList.remove("display")
+        }
+        if(count === 0)return
+        count -=1
+         photo[count].classList.toggle("display")
+     })
+    </script>
+</body>
+
+</html>

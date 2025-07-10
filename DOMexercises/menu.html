@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        li{
+            list-style: none;
+        }
+        .toggoleMenu{
+            display: none;
+        }
+        .menu-btn{
+            position: fixed;
+        }
+        .listColor{
+            background-color: blue;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight:1rem;
+        }
+        ul li{
+            background-color: aqua;
+            text-align: center;
+            padding:1rem;
+        }
+        .menu{
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <h1>toggled Menu</h1>
+    <button class="menu-btn">x</button><br>
+    <div class="menu">
+        <h2>Option</h2>
+        <ul>
+            <li class="item">Home</li>
+            <li class="item">Sercises</li>
+            <li class="item">About</li>
+            <li class="item">Contacts</li>
+            <li class="item">Login</li>
+        </ul>
+    </div>
+    <script>
+      const menuButton = document.querySelector(".menu-btn")
+      const menu = document.querySelector(".menu")
+      const optionList= document.querySelectorAll(".item")
+      menuButton.addEventListener("click",()=>{
+        menu.classList.toggle("toggoleMenu")
+        menuButton.textContent ="Menu"
+      })
+      for( let list of optionList){
+        list.addEventListener("mouseover",()=>{
+           list.classList.add("listColor")
+           
+        })
+        list.addEventListener("mouseout",()=>{
+           list.classList.remove("listColor")
+           
+        })
+    }
+
+    </script>
+</body>
+</html>
