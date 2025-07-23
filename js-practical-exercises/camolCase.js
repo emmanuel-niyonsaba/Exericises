@@ -6,7 +6,7 @@
 const camolCase =(string)=>{
 let result =[]
 const newString = string.split("")
-newString.forEach((elem,index) => {
+newString.forEach((elem) => {
     if(/[A-Z]/.test(elem) ===true){
         result.push(" ")
         result.push(elem)
@@ -18,4 +18,4 @@ newString.forEach((elem,index) => {
 });
 return result.join("")
 }
-console.log(camolCase("camolCase"))
+console.log(camolCase("myBeIamDone"))
