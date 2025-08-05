@@ -2,7 +2,7 @@
 // Inheritance
 
 // Definition: Child classes inherit behavior from a parent class.
-/
+
 
 class Car {
     constructor(make, model) {
