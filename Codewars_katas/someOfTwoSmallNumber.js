@@ -4,4 +4,3 @@ function sumTwoSmallestNumbers(numbers) {
   return sorted[0]+sorted[1]
   
 }
-c
