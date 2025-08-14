@@ -1,8 +1,8 @@
- // this function is to change the binary into decimal 
+
 /** 
-//  * @param {string} encoded
-//  * @returns Uint8Array
-//  */
+ * @param {string} encoded
+ * @returns Uint8Array
+ */
 function fromBase64(encoded) {
 let result =[]
 for(let code of encoded){
@@ -10,3 +10,4 @@ for(let code of encoded){
 }
   return result.join("")
 }
+console.log(fromBase64("777d"))
