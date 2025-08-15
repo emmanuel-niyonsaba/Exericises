@@ -1,10 +1,15 @@
-
-
 String.prototype.toAlternatingCase = function () {
   let result =[]
   for(i=0; i<this.length; i++){
-  result.push ( this[i].toUpperCase()===true? this[i].toLowerCase(): this[i].toUpperCase())
+  if(this[i]===this[i].toUpperCase()){
+    result.push(this[i].toLowerCase())
+  }
+  
+    else{
+      result.push(this[i].toUpperCase())
+    }
+    
   }
   return result.join('')
 }
-console.log("hello word".toAlternatingCase)
+console.log("hello world".toAlternatingCase())
