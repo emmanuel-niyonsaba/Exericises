@@ -1,0 +1,9 @@
+
+function removeChar(str){
+ const arr= str.split("")
+ arr.pop()
+  arr.shift()
+  return arr.join('')
+
+};
+console.log(removeChar("semmysonh"))
