@@ -1,14 +1,13 @@
 
 function isAN(value) {
-  if(typeof value === "Number")return true
-  for(let i in value){
-    if (typeof i === "Number") 
-        {
-        return true
-    }
+  if (typeof value === "number") {
+    return Number.isFinite(value);
   }
-  return false
-
+  if (value instanceof Number) {
+    return Number.isFinite(value.valueOf());
+  }
+  return false;
 }
+
 
 console.log(isAN(2))
