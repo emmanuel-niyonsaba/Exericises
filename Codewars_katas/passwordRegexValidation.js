@@ -11,5 +11,7 @@
 
 
 const passwordValidation  =(password) =>{
-    return /^([\w]{6}..)$/i.test(password)
+    const regEx =/^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])[a-zA-Z\d]{6,}$/
+    return regEx.test(password)
 }
+console.log(passwordValidation("fgshjdkhghdh1234323"))
