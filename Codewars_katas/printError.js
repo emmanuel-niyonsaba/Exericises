@@ -10,3 +10,6 @@ if(!allowed.includes(char)){
 }
   return `${counter}/${s.length}`
   }
+
+  // This comment is here for to build my git hub profile
+  
