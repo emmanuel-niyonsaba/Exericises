@@ -5,7 +5,7 @@ function fibonaci(frenq){
     let b =1
     let c=0
     console.log(c)
-    for(i=1;i<frenq;i++){
+    for(i=1;i<=frenq;i++){
 
         a=b
         b=c
@@ -13,4 +13,4 @@ function fibonaci(frenq){
         console.log(c)
     }
     }
-    fibonaci(5);
+    fibonaci(5)
