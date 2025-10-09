@@ -9,4 +9,6 @@ let transFormObj=(obj)=>{
 }
 
 console.log(transFormObj({hello:'emmy',age:12}))
+
+
 //this was about to change the object property into value and also value to property name as well
