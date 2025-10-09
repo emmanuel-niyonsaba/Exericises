@@ -3,7 +3,7 @@ const longFormatData = [
 { id: 2, name: "Bob", age: 25 },
 { id: 3, name: "Charlie", age: 35 }
 ];
-const keys = ["id", "name"];
+const keys = ["id", "name","age"];
 // // const wideFormatData = pivotLongToWide(longFormatData, keys);
 // // console.log(wideFormatData);
 // output: {
