@@ -1,9 +1,6 @@
 
-
-Obsolete
-7 kyu
-Exes and Ohs
-JavaScript:
+// this wil check if the number of oh's and x in string are equal and return ture 
+// else it will return false
 function XO(str) {
 //     let x= str.match(/x/i).length;
 //   console.log(x)
