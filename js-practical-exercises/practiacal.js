@@ -15,12 +15,12 @@ const keys = ["id", "name","age"];
 
 
 
-function wideFormatData(data, keys) {
+function wideFormatData(a, b) {
   const result = {};
 
-  for (const key of keys) {
+  for (const k of b) {
 
-    result[key] = data.map(item => item[key]);
+    result[k] = data.map(item => item[k]);
   }
 
   return result;
