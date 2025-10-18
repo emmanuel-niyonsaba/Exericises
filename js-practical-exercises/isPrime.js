@@ -11,3 +11,4 @@ function isPrime(num) {
 
 }   
 //comment for to day
+// the sedond comment for today
