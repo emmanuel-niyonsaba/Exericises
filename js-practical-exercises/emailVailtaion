@@ -1,5 +1,5 @@
 
-
+// thought process: create a function that takes an email as an argument, use regex to check if the email ends with @gmail.com and contains only alphanumeric characters before the @ symbol, return a message based on the validation result.
 const emailValidation =(email)=>{
     const regEx =/^[a-zA-Z0-9]*@gmail.com$/
 const emaiCheck = regEx.test(email)
