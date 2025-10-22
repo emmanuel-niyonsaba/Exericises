@@ -1,5 +1,5 @@
 
-//this code will check 
+//this code will check and validate a credit card number format
 const ValidateCard=(cardNumber)=>{
     const regEx= /^(\d{4}-){3}\d{4}$/;
     // let a = /^(\d{4}-){3}\d{4}/;
