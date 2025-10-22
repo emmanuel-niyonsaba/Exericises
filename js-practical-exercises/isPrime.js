@@ -2,7 +2,7 @@
 //this function checks if a number is prime or not
 function isPrime(num) {
     if (num <= 1) return false; 
-
+// check for factors from 2 to the square root of num
     for (let i = 2; i <= Math.sqrt(num); i++) {
         if (num % i === 0) return false; 
     }                   
