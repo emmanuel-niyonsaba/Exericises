@@ -1,5 +1,5 @@
 
-
+//this code will check 
 const ValidateCard=(cardNumber)=>{
     const regEx= /^(\d{4}-){3}\d{4}$/;
     // let a = /^(\d{4}-){3}\d{4}/;
