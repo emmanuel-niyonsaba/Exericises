@@ -1,5 +1,6 @@
 
 export function sumArray(array: number[] | null): number {
+  // condition to check if array is around and array also has the value
   if (!array || array.length === 0) {
     return 0;
   }
