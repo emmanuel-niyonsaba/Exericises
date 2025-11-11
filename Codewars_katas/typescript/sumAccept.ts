@@ -17,4 +17,5 @@ export function sumArray(array: number[] | null): number {
   return result;
 }
 
+///Then here is the check point 
 console.log(sumArray([12, 4, 5, 8, 9, 6, 89, 5]));
